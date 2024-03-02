@@ -29,21 +29,6 @@ Then, you can proceed in making a Jupyter Notebook in the IDE of your choice. I 
 
 After cleaning the data, I started by showing the summary statistics table for ease of inspecting the usual statistical values that I'm interested with. Afterwards, I created a pairs plot chat which will illustrate the distribution of the variables and its relationship with the other variables. Then I made a box-plot to visually show the dispertion of my ride data and if there are signs of skewness. Then, I proceeded with illustrating the distance per month that I've covered through a bar plot. And lastly, I made another box-plot to see which quarter am I most actively riding my bike outdoors
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -196,29 +181,12 @@ After cleaning the data, I started by showing the summary statistics table for e
 </table>
 </div>
 
-
-
 The good thing about showing the summary statistics first is that you'll immediately see if there are some extreme and funky values through showing the minimum and maximum values. In my data, it can be observed my maximum elapsed time was 8489rs (Calculated as =3055629/60mins/60hrs) for which I couldn't think of any ride that I made where I was on the bike for that long. However, for the moving time, my max was at 10.63 hrs which was when I did my first Laguna Loop. 
 
 Another funky value was my max heart rate which peaked at 241bpm? I don't have the best heart condition but I'm pretty sure that I won't reach that high of a heart rate. 
 
 Those two might have skewed my data hence, I think we should exclude those before even proceeding with the other charts and analysis. As I recall, I haven't made an activity which lasted for more than 20 hours. With regard to my max heartrate, there were times that my heart rate monitor was acting strange that's why some of the readings were off. The max reasonable heart rate that I could recall was at 210bpm. Hence, I will set another filter to not include those rides with heart rate greater than 210bpm.
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -377,8 +345,6 @@ Those two might have skewed my data hence, I think we should exclude those befor
 After excluding those activities, I am now down to 135 records from having 138 records to start with. 
     
 ![png](assets/analyze-strava_files/analyze-strava_23_0.png)
-    
-
 
 Using a pairs plot really is very useful as it gives you immediate visualization amongst the variables that you wanted to have an analysis with. 
 
